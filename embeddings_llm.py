@@ -19,7 +19,7 @@ def create_vectorstore(chunks, embedding_model="sentence-transformers/all-mpnet-
 
 def initialize_agent(tools, llm_model="gemini-2.0-flash-001"):
     """Initialize Gemini agent (no .env required)."""
-    GEMINI_API_KEY = "AIzaSyCA-lxDO324cyulMI3MSx-2APsYJpom26Y"  # ⚠️ Replace with your actual Gemini key
+    GEMINI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # ⚠️ Replace with your actual Gemini key
     llm = ChatGoogleGenerativeAI(
         model=llm_model,
         temperature=0.3,
@@ -32,3 +32,4 @@ def initialize_agent(tools, llm_model="gemini-2.0-flash-001"):
 def run_query(agent_executor, query: str):
     """Run query through LangChain agent."""
     return agent_executor.invoke({"input": query})
+
